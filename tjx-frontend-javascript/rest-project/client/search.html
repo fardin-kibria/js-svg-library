@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <title>Search for Students</title>
+</head>
+
+<body>
+  <main class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="#">Students</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="add.html">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="edit.html">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="delete.html">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <h1>Search for Students</h1>
+      <hr>
+    </header>
+    <section>
+      <div class="mb-3">
+        <label for="last-name" class="form-label">Search using students' last name</label>
+        <input type="text" class="form-control" name = "searchName" id = "search-name" placeholder="Enter surname">
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button id="search-button" type="button" class="btn btn-primary">Search</button>
+        <button type="reset" class="btn btn-warning">Reset</button>
+      </div>
+    </section>
+    <section class="mt-3">
+      <table class="table table-striped table-hover" hidden>
+        <thead>
+          <tr>
+            <th> First Name</th>
+            <th> Last Name</th>
+            <th> Region </th>
+          </tr>
+        </thead>
+        <tbody id = "search-body"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="search.js" type="module"></script>
+</body>
+</html>

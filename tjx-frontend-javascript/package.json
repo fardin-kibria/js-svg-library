@@ -1,0 +1,45 @@
+{
+  "name": "tjx-frontend-javascript",
+  "version": "1.0.0",
+  "description": "\"Front-end JavaScript resources for TJX's EICP Cohort\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:root": "http-server -p 3000 --cors -c-1",
+    "server:json": "json-server --watch --port 8000 data/students.json"
+  },
+  "author": "John Paxton <pax@speedingplanet.com>",
+  "license": "ISC",
+  "repository": {
+    "url": "https://github.com/EICPCohort4/tjx-frontend-javascript/"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "http-server": "^13.0.0",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.3.2",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "http-errors": "^1.8.0",
+    "jade": "^1.11.0",
+    "json-server": "~0.16.3",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "lodash-id": "^0.14.1",
+    "lowdb": "^1.0.0",
+    "morgan": "^1.10.0"
+  }
+}

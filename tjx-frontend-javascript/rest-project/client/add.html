@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/bootstrap.css">
+  <title>Add a student</title>
+  <style>
+    @keyframes yellowfade {
+      from {
+        background: yellow;
+      }
+
+      to {
+        background: transparent;
+      }
+    }
+
+    .message-update {
+      animation-name: yellowfade;
+      animation-duration: 3s;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" href="#">Students</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="list.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search.html">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="edit.html">Edit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="delete.html">Delete</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <h1>Add a Student</h1>
+      <hr>
+    </header>
+    <form id="add-form">
+      <div class="mb-3">
+        <label for="first-name" class="form-label">First Name:</label>
+        <input type="text" class="form-control" name="firstName" id="first-name">
+        <div class="error"></div>
+      </div>
+      <div class="mb-3">
+        <label for="last-name" class="form-label">Last Name:</label>
+        <input type="text" class="form-control" name="lastName" id="last-name">
+        <div class="error"></div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">location:</label>
+        <select name="location" id="location" class="form-select">
+          <option value="" selected>Choose a location</option>
+          <option value="Europe">Europe</option>
+          <option value="Canada">Canada</option>
+          <option value="US">US</option>
+        </select>
+        <div class="error"></div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary" id="add-button">Add</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+          <div class="error"></div>        
+        </div>
+        <div class="col">
+          <div class="error"></div>
+        </div>
+      </div>
+    </form><br>
+    <div id = "message-box" hidden>
+      <div class="error"></div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="add.js" type="module"></script>
+</body>
+</html>
